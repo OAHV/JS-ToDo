@@ -21,15 +21,16 @@
             <button onclick="addToDo()">Add ToDo</button>
             <hr>
         </div>
-        <div>
+        <div class="messages">
             <!-- This is the div for status and error messages (hidden until displayed) -->
             <p id="added" class="statusMessage">ToDo added...</p>
             <p id="notadded" class="errorMessage">Please enter a ToDo...</p>
             <p id="cleared" class="statusMessage">All deleted successfully...</p>
-            <hr>
+            
         </div>
         <div>
             <!-- This is the div for the seach input field -->
+            <hr>
             <p>ToTos</p>
             <!-- The search input field is updated on each letter written or deleted -->
             <input id="sbutton" oninput="searchToDo()" type="text" placeholder="Search for task...">
