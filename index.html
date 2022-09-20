@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <script type="text/javascript" src="JS-ToDo.js"></script>
+    <link rel="stylesheet" href="ToDo.css">
+</head>
+<body>
+    <div class="outer">
+        <!-- The outer-most div -->
+        <p class="ptop">ToDo List</p>
+        <div>
+            <!-- The div for input of new items -->
+            <!-- The input field for new items - clear search field when this is in focus -->
+            <input id="addedToDo" type="text" placeholder="Input task here..." onfocus="clearSearch()">
+            <br><br>
+            <!-- Button to add item to the list that is displayed below -->
+            <button onclick="addToDo()">Add ToDo</button>
+            <hr>
+        </div>
+        <div>
+            <!-- This is the div for status and error messages (hidden until displayed) -->
+            <p id="added" class="statusMessage">ToDo added...</p>
+            <p id="notadded" class="errorMessage">Please enter a ToDo...</p>
+            <p id="cleared" class="statusMessage">All deleted successfully...</p>
+            <hr>
+        </div>
+        <div>
+            <!-- This is the div for the seach input field -->
+            <p>ToTos</p>
+            <!-- The search input field is updated on each letter written or deleted -->
+            <input id="sbutton" oninput="searchToDo()" type="text" placeholder="Search for task...">
+            <hr>
+        </div>
+        <div id="list">
+            <!-- This is where the list of items will be displayed -->
+            <!-- They are on this form:
+                <div class="ToDoItem">
+                    <p> ToDoList[i] </p>
+                    <button onclick="delToDo(i)" class="del"><p>x</p></button>
+                </div>
+            -->
+        </div>
+        <div>
+            <hr><br>
+            <button class="clear" onclick="clearList()">Clear All</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- By Ole Victor --->
